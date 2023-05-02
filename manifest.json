@@ -1,0 +1,10 @@
+{
+    "name": "HBL Block",
+    "version": "1.0",
+    "description": "Bloqueur de pub développé par HBL",
+    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "manifest_version": 3
+}
