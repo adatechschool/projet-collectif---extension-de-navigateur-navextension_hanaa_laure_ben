@@ -1,15 +1,15 @@
-const defaultFilters = [
-	"*://*.doubleclick.net/*",
-	"*://partner.googleadservices.com/*",
-	"*://*.googlesyndication.com/*",
-	"*://*.google-analytics.com/*",
-	"*://creative.ak.fbcdn.net/*",
-	"*://*.adbrite.com/*",
-	"*://*.exponential.com/*",
-	"*://*.quantserve.com/*",
-	"*://*.scorecardresearch.com/*",
-	"*://*.zedo.com/*",
-]
+import * as fs from 'fs/promises';
+
+const file = await fs.open('blacklist.txt');
+
+const defaultFilters = [];
+
+for await (const line of file.readLines()) {
+    defaultFilters.push(line.trim())
+}
+
+
+console.log(defaultFilters)
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) { return { cancel: true }},

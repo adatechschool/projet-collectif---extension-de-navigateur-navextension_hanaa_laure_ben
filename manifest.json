@@ -2,9 +2,12 @@
     "name": "HBL Block",
     "version": "1.0",
     "description": "Bloqueur de pub développé par HBL",
-    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+    "permissions": ["webRequest", "webRequestBlocking"],
+    "host_permissions": [
+        "<all_urls>"
+      ],
     "background": {
-        "scripts": ["background.js"]
+        "service-worker": ["background.js"]
     },
     "manifest_version": 3
 }
