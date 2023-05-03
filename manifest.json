@@ -16,9 +16,11 @@
     "background": {
         "service-worker": ["background.js"]
     },
-    "content-scripts": [{
-        "matches": ["https://www.lemonde.fr"],
-        "js": ["background.js"]
-    }],
+    "content_scripts": [
+        {
+            "matches": ["https://www.lemonde.fr/"],
+            "js": ["content-script.js"]
+        }
+    ],
     "manifest_version": 3
 }
