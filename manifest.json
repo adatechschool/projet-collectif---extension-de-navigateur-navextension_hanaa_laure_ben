@@ -4,7 +4,7 @@
     "declarative_net_request": {
         "rule_resources": [{
             "id": "ruleset_1",
-            "enabled": true,
+            "enabled": false,
             "path": "rules.json"
         }]
     },
@@ -18,7 +18,8 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.lemonde.fr/"],
+            "matches": ["https://www.lemonde.fr/",
+        "https://www.w3schools.com/*"],
             "js": ["content-script.js"]
         }
     ],
