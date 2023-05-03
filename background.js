@@ -8,6 +8,9 @@ for await (const line of file.readLines()) {
     defaultFilters.push(line.trim())
 }
 
+// const banniereMilieu = document.getElementById("banniere_milieu");
+
+// const googleId = document.getElementById("google_ads_iframe_/128139881/LM_lemonde/a_la_une/a_la_une/hp/banniere_milieu_0__container__")
 
 console.log(defaultFilters)
 
