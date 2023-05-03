@@ -1,8 +1,15 @@
 {
     "name": "HBL Block",
     "version": "1.0",
+    "declarative_net_request": {
+        "rule_resources": [{
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "rules.json"
+        }]
+    },
     "description": "Bloqueur de pub développé par HBL",
-    "permissions": ["webRequest", "webRequestBlocking"],
+    "permissions": ["webRequest", "webRequestBlocking", "declarativeNetRequest"],
     "host_permissions": [
         "<all_urls>"
       ],
