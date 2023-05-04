@@ -9,7 +9,7 @@
     "id": 2,
     "priority": 1,
     "action": { "type": "block" },
-    "condition": {"urlFilter": "presse-citron.net", "resourceTypes": ["div", "iframe", "img"]}
+    "condition": {"urlFilter": "presse-citron.net", "resourceTypes": ["sub_frame"]}
   },
   {
     "id": 3,

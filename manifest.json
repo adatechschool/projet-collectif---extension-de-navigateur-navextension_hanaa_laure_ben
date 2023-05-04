@@ -4,12 +4,12 @@
     "declarative_net_request": {
         "rule_resources": [{
             "id": "ruleset_1",
-            "enabled": true,
+            "enabled": false,
             "path": "rules.json"
         }]
     },
     "description": "Bloqueur de pub développé par HBL",
-    "permissions": ["webRequest", "webRequestBlocking", "declarativeNetRequest"],
+    "permissions": ["webRequest", "declarativeNetRequest"],
     "host_permissions": [
         "<all_urls>"
     ],
@@ -18,8 +18,10 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.lemonde.fr/",
-        "https://www.w3schools.com/*"],
+            "matches": ["https://www.lemonde.fr/*",
+                "https://www.presse-citron.net/*",
+                "https://www.w3schools.com/*"
+            ],
             "js": ["content-script.js"]
         }
     ],

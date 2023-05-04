@@ -1,3 +1,17 @@
+const defaultFilters = [
+	"*://*.doubleclick.net/*",
+	"*://partner.googleadservices.com/*",
+	"*://*.google-syndication.com/*",
+	"*://*.google-analytics.com/*",
+	"*://creative.ak.fbcdn.net/*",
+	"*://*.adbrite.com/*",
+	"*://*.exponential.com/*",
+	"*://*.quantserve.com/*",
+	"*://*.scorecardresearch.com/*",
+	"*://*.zedo.com/*",
+	"*://*.presse-citron.net/*",
+	"*://*.lemonde.fr/*"
+]
 // Importation du module File System de Node
 import * as fs from 'fs/promises';
 
