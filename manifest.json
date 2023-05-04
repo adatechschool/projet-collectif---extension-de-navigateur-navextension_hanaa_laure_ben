@@ -16,5 +16,12 @@
     "background": {
         "service-worker": ["background.js"]
     },
+    "content_scripts": [
+        {
+            "matches": ["https://www.lemonde.fr/",
+        "https://www.w3schools.com/*"],
+            "js": ["content-script.js"]
+        }
+    ],
     "manifest_version": 3
 }

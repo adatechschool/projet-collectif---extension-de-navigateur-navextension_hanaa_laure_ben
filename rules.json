@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": { "type": "block" },
+      "condition": {"urlFilter": "lemonde.fr", "resourceTypes": ["main_frame"] }
+    },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "presse-citron.net", "resourceTypes": ["div", "iframe", "img"]}
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "w3schools.com", "resourceTypes": ["main_frame"] }
+  }
+]
