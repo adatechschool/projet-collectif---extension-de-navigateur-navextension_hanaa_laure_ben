@@ -19,7 +19,8 @@
     "content_scripts": [
         {
             "matches": ["https://www.lemonde.fr/",
-                        "https://www.w3schools.com/*"],
+                        "https://www.w3schools.com/*",
+                        "https://www.presse-citron.net/"],
             "js": ["content-script.js"]
         }
     ],

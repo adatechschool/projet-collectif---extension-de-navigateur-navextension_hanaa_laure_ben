@@ -5,13 +5,23 @@ const banniereMilieu = document.getElementById("banniere_milieu");
 // Variable pour side-section sur W3School
 const sideSection = document.getElementsByClassName("sidesection");
 
+// const area = document.getElementsByClassName("area--featured")
+// const iframeArea = area[0].getElementsByTagName("iframe")
+
+console.log("coucou")
+// console.log(iframeArea)
+
 const div = document.getElementsByTagName("div");
 const ad = document.getElementById('ad')
 const logoLeMonde = document.getElementsByClassName("logo__lemonde")
 const obFirst = document.getElementsByClassName("ob-first")
-const obShow = document.getElementsByClassName("ob-show")
+const obShow = document.getElementsByClassName("ob-show") 
 const servicesListImg = document.getElementsByClassName("services-list__service-img")
 const imgBanniereMilieu = banniereMilieu.getElementsByTagName("img")
+const iframeBanniereMilieu = banniereMilieu.getElementsByTagName("iframe")
+
+let urlImg = "url(https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png)";
+let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png";
 // Variable pour le bandeau "en-continu" sur LeMonde.fr
 const enContinu = document.getElementById("en-continu");
 
@@ -23,25 +33,19 @@ function setRandomColor() {
     enContinu.style.backgroundColor = randomColor;
 }
 
-function setImage() {
-    let urlImg = "url(https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png)";
-    let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png";
-    logoLeMonde[0].style.backgroundImage = urlImg;
-    obFirst[0].style.backgroundImage = urlImg;
-    for (let image of obShow){
+function setImage(htmlElement) {
+    console.log(typeof htmlElement)
+    // if (typeof htmlElement == "object")
+    htmlElement[0].style.backgroundImage = urlImg;
+    for (let image of htmlElement){
         image.src = url;
     } 
-    for (let image of servicesListImg){
-        image.src = url;
-    }
-    console.log(imgBanniereMilieu)
-    imgBanniereMilieu[0].src = url;
-    // obShow[0].src = url;
+    htmlElement[0].src = url;
 }
 
 
 document.addEventListener('click', setRandomColor)
-document.addEventListener('click', setImage)
+document.addEventListener('click', () => { setImage(logoLeMonde), setImage(obFirst), setImage(obShow), setImage(iframeBanniereMilieu), setImage(iframeArea) })
 
 // enContinu.style.backgroundColor = "#" + randomColor;
 
