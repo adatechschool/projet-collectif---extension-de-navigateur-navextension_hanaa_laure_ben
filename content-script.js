@@ -25,7 +25,7 @@ function setRandomColor() {
 
 function setImage() {
     let urlImg = "url(https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png)";
-    let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png"
+    let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png";
     logoLeMonde[0].style.backgroundImage = urlImg;
     obFirst[0].style.backgroundImage = urlImg;
     for (let image of obShow){
