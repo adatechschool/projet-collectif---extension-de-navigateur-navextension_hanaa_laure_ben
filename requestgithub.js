@@ -20,4 +20,3 @@ let file = await fs.writeFile('domains.txt', response.data)
 console.log(`Response status : ${response.status}`);
 console.log(typeof response.data)
 
-// process.env.config.USER_TOKEN
