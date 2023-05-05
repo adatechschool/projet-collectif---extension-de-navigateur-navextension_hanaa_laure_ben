@@ -1,12 +1,145 @@
-[{"id":1,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.doubleclick.net/*","resourceTypes":["image"]}},
-{"id":3,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.googlesyndication.com/*","resourceTypes":["image"]}},
-{"id":2,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://partner.googleadservices.com/*","resourceTypes":["image"]}},
-{"id":4,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.google-analytics.com/*","resourceTypes":["image"]}},
-{"id":5,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://creative.ak.fbcdn.net/*","resourceTypes":["image"]}},
-{"id":6,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.adbrite.com/*","resourceTypes":["image"]}},
-{"id":7,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.exponential.com/*","resourceTypes":["image"]}},
-{"id":8,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.quantserve.com/*","resourceTypes":["image"]}},
-{"id":9,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.scorecardresearch.com/*","resourceTypes":["image"]}},
-{"id":10,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.zedo.com/*","resourceTypes":["image"]}},
-{"id":11,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"*://*.amazon.com/*","resourceTypes":["image"]}}
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.doubleclick.net/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://partner.googleadservices.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.googlesyndication.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.google-analytics.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://creative.ak.fbcdn.net/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.adbrite.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.exponential.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.quantserve.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.scorecardresearch.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.zedo.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*://*.amazon.com/*",
+      "resourceTypes": [
+        "image"
+      ]
+    }
+  }
 ]

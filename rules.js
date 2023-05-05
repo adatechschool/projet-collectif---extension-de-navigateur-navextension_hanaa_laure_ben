@@ -14,6 +14,9 @@ for await (const line of file.readLines()) {
     urlsArray.push(line.trim())
 };
 
+// Ajout dans dictionariesArray de chaque url présente dans blacklist.txt, 
+// en respectant le format du dictionnaire demandé par rules.json
+
 urlsArray.forEach(url => {
     let ruleDictionary = {
         id: parseInt(`${idCount++}`),
@@ -24,8 +27,6 @@ urlsArray.forEach(url => {
     dictionariesArray.push(ruleDictionary)
 });
 
-
-dictionariesArray.forEach(dictionary => {
-    fs.appendFile("rules.json", JSON.stringify(dictionary) + ",\n"), err =>
-    {if (err) console.log("Error writing file:", err)}
-});
+fs.writeFile("rules.json", JSON.stringify(dictionariesArray), err => {
+    if (err) console.log("Error writing file:", err)
+})
