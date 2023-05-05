@@ -8,3 +8,4 @@
 	*://*.quantserve.com/*
 	*://*.scorecardresearch.com/*
 	*://*.zedo.com/*
+	*://*.amazon.com/*
