@@ -4,13 +4,21 @@ const elements = document.getElementsByTagName("*");
 const banniereMilieu = document.getElementById("banniere_milieu");
 // Variable pour side-section sur W3School
 const sideSection = document.getElementsByClassName("sidesection");
+// Variable pour la création d'une couleur aléatoire
+const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+// Variables pour l'URL de l'image qui est ajoutée sur les éléments HTML modifiés
+// Variable pour la modification du CSS
+let urlImg = "url(https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png)";
+// Variable pour la modification de "src" d'une image ou d'un "iframe"
+let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png";
 
-// const area = document.getElementsByClassName("area--featured")
-// const iframeArea = area[0].getElementsByTagName("iframe")
+
 
 console.log("coucou")
-// console.log(iframeArea)
 
+
+// Variables désignant les différents éléments HTML que l'on veut modifier, présents sur LeMonde.fr
+const enContinu = document.getElementById("en-continu");
 const div = document.getElementsByTagName("div");
 const ad = document.getElementById('ad')
 const logoLeMonde = document.getElementsByClassName("logo__lemonde")
@@ -19,20 +27,21 @@ const obShow = document.getElementsByClassName("ob-show")
 const servicesListImg = document.getElementsByClassName("services-list__service-img")
 const imgBanniereMilieu = banniereMilieu.getElementsByTagName("img")
 const iframeBanniereMilieu = banniereMilieu.getElementsByTagName("iframe")
+const area = document.getElementsByClassName("area--featured")
+const iframeArea = area[0].getElementsByTagName("iframe")
 
-let urlImg = "url(https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png)";
-let url = "https://i.kym-cdn.com/photos/images/original/001/866/880/db1.png";
-// Variable pour le bandeau "en-continu" sur LeMonde.fr
-const enContinu = document.getElementById("en-continu");
 
-// Fonction pour changer la couleur, de manière aléatoire, pour enContinu
-function setRandomColor() {
-    let randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+
+
+// Fonction pour changer la couleur, de manière aléatoire, pour un élement HTML spécifié
+function setRandomColor(htmlElement) {
+    
     console.log("J'écoute")
     console.log(randomColor)
-    enContinu.style.backgroundColor = randomColor;
+    htmlElement.style.backgroundColor = randomColor;
 }
 
+// Fonction pour modifier l'image d'un élément HTML spécifié
 function setImage(htmlElement) {
     console.log(typeof htmlElement)
     // if (typeof htmlElement == "object")
@@ -43,11 +52,11 @@ function setImage(htmlElement) {
     htmlElement[0].src = url;
 }
 
-
-document.addEventListener('click', setRandomColor)
+// Event listeners de clic, pour bien montrer les modifications opérées sur LeMonde.fr
+document.addEventListener('click', () => { setRandomColor(enContinu )})
 document.addEventListener('click', () => { setImage(logoLeMonde), setImage(obFirst), setImage(obShow), setImage(iframeBanniereMilieu), setImage(iframeArea) })
 
-// enContinu.style.backgroundColor = "#" + randomColor;
+
 
 // Loop pour retrouver l'attribute aria-label ; s'il est égal à Advertisment, alors on le loggue dans la console.
 for (let i = 0 ; i < elements.length ; i++) {
