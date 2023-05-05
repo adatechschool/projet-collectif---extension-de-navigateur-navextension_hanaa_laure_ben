@@ -1,4 +1,5 @@
 import * as fs from 'fs/promises';
+import * as config from 'config.env';
 
 const file = await fs.open('blacklist.txt');
 let idCount = 1;
