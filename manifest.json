@@ -1,5 +1,5 @@
 {
-    "name": "HBL Block",
+    "name": "HBL Block PUBs",
     "version": "1.0",
     "declarative_net_request": {
         "rule_resources": [{
@@ -8,8 +8,9 @@
             "path": "rules.json"
         }]
     },
-    "description": "Bloqueur de pub développé par HBL",
-    "permissions": ["webRequest", "declarativeNetRequest"],
+    "description": "Bloqueur de pubs développé par HBL",
+    "permissions": ["activeTab", "tabs", "declarativeNetRequest", "declarativeNetRequestFeedback"
+    ],
     "host_permissions": [
         "<all_urls>"
     ],
@@ -18,10 +19,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://www.lemonde.fr/*",
-                "https://www.presse-citron.net/*",
-                "https://www.w3schools.com/*"
-            ],
+            "matches": ["<all_urls>"],
             "js": ["content-script.js"]
         }
     ],

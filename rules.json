@@ -1,20 +1,54 @@
 [
-    {
-      "id": 1,
-      "priority": 1,
-      "action": { "type": "block" },
-      "condition": {"urlFilter": "lemonde.fr", "resourceTypes": ["main_frame"] }
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
     },
+    "condition": {
+      "urlFilter": "googleads.g.doubleclick",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
   {
     "id": 2,
     "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "presse-citron.net", "resourceTypes": ["sub_frame"]}
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "aax.amazon-adsystem",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   },
   {
     "id": 3,
     "priority": 1,
-    "action": { "type": "block" },
-    "condition": {"urlFilter": "w3schools.com", "resourceTypes": ["main_frame"] }
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "tpc.googlesyndication",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "pagead2.googlesyndication",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
   }
 ]

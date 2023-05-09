@@ -1,52 +1,46 @@
-/*
-function switchDisplay(){
+console.log("Salut ! Dans 7 secondes toutes les pubs vont être supprimées.");
 
-    /!* Variable bannerGif qui sélectionne l'élément du <iframe> sur le site press-citron :
-    <iframe id="google_ads_iframe_/21883197849/presse-citron.net/lifestyle_0"
-            name="google_ads_iframe_/21883197849/presse-citron.net/lifestyle_0" title="3rd party ad content" width="970"
-            height="250" scrolling="no" marginWidth="0" marginHeight="0" frameBorder="0" role="region"
-            aria-label="Advertisement" tabIndex="0" style="border: 0px; vertical-align: bottom;"
-            data-load-complete="true" data-google-container-id="1">
-    </iframe>
-    *!/
+//*** Fonction qui retrouve toutes les balises Html qui contiennent des pubs et les supprime :
+function retrouver_supprimer_balises_pubs() {
 
-    const balise_div = document.getElementsByTagName("div");
+    //1 Initialisations des arrays qui vont contenir toutes les balises Html à supprimer dans la page grâce à leur
+    // ClassName :
+    // "od-billboard", "mvp_ad_halfpage_widget", "mvp-widget-ad", "mvp-widget-ad-halfpage",
+    // "HalfpageAd_1", "optidigital-ad-center"
 
-    const balise_iframe = balise_div[0].getElementsByTagName("iframe");
+    const liste_balise_od_billboard =
+        Array.from(document.getElementsByClassName("od-billboard"));
+    const liste_balise_mvp_ad_halfpage_widget =
+        Array.from(document.getElementsByClassName("mvp_ad_halfpage_widget"));
+    const class_mvp_widget_ad =
+        Array.from(document.getElementsByClassName("mvp-widget-ad"));
+    const class_mvp_widget_ad_halfpage =
+        Array.from(document.getElementsByClassName("mvp-widget-ad-halfpage"));
+    const class_HalfpageAd_1 =
+        Array.from(document.getElementsByClassName("HalfpageAd_1"));
+    const class_optidigital_ad_center =
+        Array.from(document.getElementsByClassName("optidigital-ad-center"));
 
-    // Remplacer bannerGif.style.backgroundImage par l'URL de l'image sélectionnée :
+    //2 Concaténer tous les arrays qui contiennent les noms des classes des différentes balises dans un seul array
+    const all_elements_to_delete_array =
+        liste_balise_od_billboard
+            .concat(liste_balise_mvp_ad_halfpage_widget)
+            .concat(class_mvp_widget_ad)
+            .concat(class_mvp_widget_ad_halfpage)
+            .concat(class_HalfpageAd_1)
+            .concat(class_optidigital_ad_center);
 
-    balise_iframe[0].src = "https://png.pngtree.com/background/20210709/original/pngtree-red-festive-irregular-simple-background-material-picture-image_915588.jpg";
-    console.log(balise_div);
-    console.log(balise_iframe);
+    //3 Affichage du nombre des balises :
+    console.log("Nombre des balises", all_elements_to_delete_array.length);
 
+    //4 Parcourir tous les éléments du array pour supprimer les pubs :
+    for (let i = 0; i < all_elements_to_delete_array.length; i++) {
+        console.log("balise à supprimer", all_elements_to_delete_array[i]);
+        all_elements_to_delete_array[i].remove();
+    }
 }
 
-document.addEventListener("click", switchDisplay)
-*/
+//****************************************** Appel des Fonctions ****************************************************//
 
-console.log("Coucou");
-
-
-/*// Variable qui sélectionne tous les éléments HTML de la page, renvoie un tableau :
-const elements = document.getElementsByTagName("*");
-
-// Loop pour retrouver l'attribut aria-label ; s'il est égal à "Advertisment", alors on l'affiche dans la console log
-for (let i = 0 ; i < elements.length ; i++) {
-let ariaLabel = elements[i].getAttribute("aria-label")
-if (ariaLabel === "Advertisment"){
-console.log("PUB !!!")
-}
-}
-
-Créer l'élément "img" et l'affecter à la constante "bannerJpeg" afin de contenir la nouvelle bannière qui va
-contenir l'image ajoutée dans le dossier "imgs" :
-const bannerJpeg = document.createElement('img');
-
-Variable pour side-section sur W3School
-const sideSection = document.getElementsByClassName("sidesection");
-
-console.log(sideSection)
-
-*/
-
+// Pour plus de visibilité, utiliser un délai de 7s pour la suppression des balises qui contiennent des pubs :
+setTimeout(retrouver_supprimer_balises_pubs, 7000);
