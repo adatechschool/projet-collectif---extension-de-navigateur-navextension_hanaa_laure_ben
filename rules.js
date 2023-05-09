@@ -10,12 +10,14 @@ let urlsArray = [];
 // Déclaration d'un tableau vide pour stocker les dictionaries à envoyer vers rules.json
 let dictionariesArray = [];
 
+let txtId = 0;
+
 // Loop qui lit toutes les lignes du fichier txt et va push chacune des strings dans urlsArray
 for await (let line of file.readLines()) {
     if (line.startsWith("#")) {
         line = "";
     } else {
-    let newLine = line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*");
+    let newLine = `${txtId++}${line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*").replace(/::$/, "*")}`;
     urlsArray.push(newLine.trim());
 }
 };
@@ -30,11 +32,17 @@ urlsArray.forEach(url => {
         action: { type: "block" },
         condition: { urlFilter: `${url}`, resourceTypes: ["image"] }
     };
-    dictionariesArray.push(ruleDictionary)
+    dictionariesArray.push(ruleDictionary);
+    
 });
 
+fs.writeFile('correctedDomains.txt', urlsArray);
 
+// Comment faire en sorte de n'écrire que les 30000 premières URLs ?
 fs.writeFile("rules1.json", JSON.stringify(dictionariesArray), err => {
-    if (err) console.log("Error writing file:", err)
+    if (err) console.log("Error writing file:", err);
 })
+    
+
+
 
