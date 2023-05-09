@@ -5,7 +5,52 @@
         "rule_resources": [{
             "id": "ruleset_1",
             "enabled": true,
-            "path": "rules.json"
+            "path": "rules1.json"
+        },
+        {
+            "id": "ruleset_2",
+            "enabled": true,
+            "path": "rules2.json"
+        },
+        {
+            "id": "ruleset_3",
+            "enabled": true,
+            "path": "rules3.json"
+        },
+        {
+            "id": "ruleset_4",
+            "enabled": true,
+            "path": "rules4.json"
+        },
+        {
+            "id": "ruleset_5",
+            "enabled": true,
+            "path": "rules5.json"
+        },
+        {
+            "id": "ruleset_6",
+            "enabled": true,
+            "path": "rules6.json"
+        },
+        {
+            "id": "ruleset_7",
+            "enabled": true,
+            "path": "rules7.json"
+        },
+        {
+            "id": "ruleset_8",
+            "enabled": true,
+            "path": "rules8.json"
+        },
+        {
+            "id": "ruleset_9",
+            "enabled": true,
+            "path": "rules9.json"
+        },
+        {
+            "id": "ruleset_10",
+            "enabled": true,
+            "path": "rules10.json"
         }]
     },
     "description": "Bloqueur de pub développé par HBL",
