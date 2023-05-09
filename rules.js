@@ -1,5 +1,5 @@
 import * as fs from 'fs/promises';
-import * as config from 'config.env';
+// import * as config from 'dotenv';
 
 const file = await fs.open('domains.txt');
 let idCount = 1;
@@ -11,9 +11,13 @@ let urlsArray = [];
 let dictionariesArray = [];
 
 // Loop qui lit toutes les lignes du fichier txt et va push chacune des strings dans urlsArray
-for await (const line of file.readLines()) {
-    let newLine = line.replace(/^address=/, "").replace(/0.0.0.0$/);
-    urlsArray.push(line.trim())
+for await (let line of file.readLines()) {
+    if (line.startsWith("#")) {
+        line = "";
+    } else {
+    let newLine = line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*");
+    urlsArray.push(newLine.trim());
+}
 };
 
 // Ajout dans dictionariesArray de chaque url présente dans blacklist.txt, 
@@ -29,6 +33,8 @@ urlsArray.forEach(url => {
     dictionariesArray.push(ruleDictionary)
 });
 
-fs.writeFile("rules.json", JSON.stringify(dictionariesArray), err => {
+
+fs.writeFile("rules1.json", JSON.stringify(dictionariesArray), err => {
     if (err) console.log("Error writing file:", err)
 })
+
