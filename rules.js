@@ -9,7 +9,7 @@ dotenv.config()
 const octokit = new Octokit({ auth: process.env.USER_TOKEN });
 
 // Réponse de l'API de GitHub
-const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+const responseNoTracking = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
     mediaType: {
         format: "raw"
     },
@@ -19,9 +19,23 @@ const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path
 }
 )
 
-// Ecriture des données dans domains.txt, puis ouverture du fichier.
-let data = await fs.writeFile('domains.txt', response.data);
-let file = await fs.open('domains.txt');
+const responseAnuDeep = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+    mediaType: {
+        format: "raw"
+    },
+    owner: "anudeepND",
+    repo: "blacklist",
+    path: "adservers.txt"
+}
+)
+
+// Ecriture des données de NoTracking dans domains.txt, puis ouverture du fichier.
+let dataNoTracking = await fs.writeFile('domains.txt', responseNoTracking.data);
+let fileNoTracking = await fs.open('domains.txt');
+
+// Ecriture des données d'AnuDeep dans adservers.txt, puis ouverture du fichier.
+let dataAnuDeep = await fs.writeFile('adservers.txt', responseAnuDeep.data);
+let fileAnuDeep = await fs.open('adservers.txt');
 
 
 // Déclaration d'un tableau vide pour stocker les URLs des sites à bloquer
@@ -33,12 +47,12 @@ let dictionariesArray = [];
 // let txtId = 0;
 
 // Loop qui lit toutes les lignes du fichier txt et va push chacune des strings dans urlsArray
-for await (let line of file.readLines()) {
+for await (let line of fileNoTracking.readLines()) {
     if (line.startsWith("#")) {
         line = "";
     } else {
     // let newLine = `${txtId++}${line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*").replace(/::$/, "*")}`;
-    let newLine = line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*").replace(/::$/, "*");
+    let newLine = line.replace(/^address=\//, "||").replace(/0.0.0.0$/, "*").replace(/::$/, "*");
     urlsArray.push(newLine.trim());
 }
 };
