@@ -52,7 +52,7 @@ for await (let line of fileNoTracking.readLines()) {
         line = "";
     } else {
     // let newLine = `${txtId++}${line.replace(/^address=/, "*").replace(/0.0.0.0$/, "*").replace(/::$/, "*")}`;
-    let newLine = line.replace(/^address=\//, "||").replace(/0.0.0.0$/, "*").replace(/::$/, "*");
+    let newLine = line.replace(/^address=\//, "||").replace(/0.0.0.0$/, "*").replace(/^0.0.0.0/, "||").replace(/::$/, "*");
     urlsArray.push(newLine.trim());
 }
 };
