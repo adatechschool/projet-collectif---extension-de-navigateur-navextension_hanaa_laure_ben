@@ -20,7 +20,7 @@ const response = await octokit.request('GET /repos/{owner}/{repo}/contents/{path
 )
 
 // Ecriture des données dans domains.txt, puis ouverture du fichier.
-let data = await fs.writeFile('domains.txt', response.data)
+let data = await fs.writeFile('domains.txt', response.data);
 let file = await fs.open('domains.txt');
 
 
@@ -81,30 +81,60 @@ let dictionary10 = [];
 
 // Comment faire en sorte de n'écrire que les 30000 premières URLs ?
 dictionariesArray.forEach(dictionary => {  
-switch (true) {
-    case dictionary.id < 29999:
-        dictionary1.push(dictionary);
-    case dictionary.id >= 30000 && dictionary.id <= 59999:
-        dictionary2.push(dictionary);
-    case dictionary.id >= 60000 && dictionary.id <= 89999:
-        dictionary3.push(dictionary);
-    case dictionary.id >= 90000 && dictionary.id <= 119999:
-        dictionary4.push(dictionary);
-    case dictionary.id >= 120000 && dictionary.id <= 149999:
-        dictionary5.push(dictionary);
-    case dictionary.id >= 150000 && dictionary.id <= 179999:
-        dictionary6.push(dictionary);
-    case dictionary.id >= 180000 && dictionary.id <= 209999:
-        dictionary7.push(dictionary);
-    case dictionary.id >= 210000 && dictionary.id <= 239999:
-        dictionary8.push(dictionary);
-    case dictionary.id >= 240000 && dictionary.id <= 269999:
-        dictionary9.push(dictionary);
-    case dictionary.id >= 270000 && dictionary.id <= 299999:
-        dictionary10.push(dictionary);
-}}); 
+// switch (true) {
+//     case (dictionary.id < 29999):
+//         dictionary1.push(dictionary);
+//     case (dictionary.id >= 30000 && dictionary.id <= 59999):
+//         dictionary2.push(dictionary);
+//     case (dictionary.id >= 60000 && dictionary.id <= 89999):
+//         dictionary3.push(dictionary);
+//     case (dictionary.id >= 90000 && dictionary.id <= 119999):
+//         dictionary4.push(dictionary);
+//     case (dictionary.id >= 120000 && dictionary.id <= 149999):
+//         dictionary5.push(dictionary);
+//     case (dictionary.id >= 150000 && dictionary.id <= 179999):
+//         dictionary6.push(dictionary);
+//     case (dictionary.id >= 180000 && dictionary.id <= 209999):
+//         dictionary7.push(dictionary);
+//     case (dictionary.id >= 210000 && dictionary.id <= 239999):
+//         dictionary8.push(dictionary);
+//     case (dictionary.id >= 240000 && dictionary.id <= 269999):
+//         dictionary9.push(dictionary);
+//     case (dictionary.id >= 270000 && dictionary.id <= 299999):
+//         dictionary10.push(dictionary);
+// }
+    if (dictionary.id <= 29999){
+    dictionary1.push(dictionary);
+    }   
+    else if (dictionary.id >= 30000 && dictionary.id <= 59999){
+    dictionary2.push(dictionary);
+    }   
+    else if (dictionary.id >= 60000 && dictionary.id <= 89999){
+    dictionary3.push(dictionary);
+    }
+    else if (dictionary.id >= 90000 && dictionary.id <= 119999){
+    dictionary4.push(dictionary);
+    }
+    else if (dictionary.id >= 120000 && dictionary.id <= 149999){
+    dictionary5.push(dictionary);
+    }
+    else if (dictionary.id >= 150000 && dictionary.id <= 179999){
+    dictionary6.push(dictionary);
+    }
+    else if (dictionary.id >= 180000 && dictionary.id <= 209999){
+    dictionary7.push(dictionary);
+    }
+    else if (dictionary.id >= 210000 && dictionary.id <= 239999){
+    dictionary8.push(dictionary);
+    }
+    else if (dictionary.id >= 240000 && dictionary.id <= 269999){
+    dictionary9.push(dictionary);
+    }
+    else if (dictionary.id >= 270000 && dictionary.id <= 299999){
+    dictionary10.push(dictionary);
+    }}); 
 
-for (let i = 1 ; i < 10 ; i++ ){
+for (let i = 1 ; i < 11 ; i++ ){
 fs.writeFile(`rules${i}.json`, JSON.stringify(eval(`dictionary${i}`)), err => {
     if (err) console.log("Error writing file:", err);})
 };    
