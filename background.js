@@ -15,6 +15,8 @@
 // adservice.google.com
 // pubads.g.doubleclick.net
 // securepubads.g.doubleclick.net
+// allocine.fr/video/      widgets.outbrain.com/    yt3.ggpht.com/    geo.dailymotion.com/     lemonde.com/
+// i.pinimg.com/
 
 const defaultFilters =
     [

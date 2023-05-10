@@ -6,9 +6,9 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "googleads.g.doubleclick",
+      "urlFilter": "googleads.g.doubleclick.net/",
       "resourceTypes": [
-        "main_frame"
+        "script"
       ]
     }
   },
@@ -19,9 +19,9 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "aax.amazon-adsystem",
+      "urlFilter": "aax.amazon-adsystem.com/",
       "resourceTypes": [
-        "main_frame"
+        "script"
       ]
     }
   },
@@ -32,9 +32,9 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "tpc.googlesyndication",
+      "urlFilter": "tpc.googlesyndication/",
       "resourceTypes": [
-        "main_frame"
+        "script"
       ]
     }
   },
@@ -45,9 +45,191 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "pagead2.googlesyndication",
+      "urlFilter": "pagead2.googlesyndication/",
       "resourceTypes": [
-        "main_frame"
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "tpc.googlesyndication.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "googletagservices.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "googleadservices.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "s0.2mdn.net/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "ad.doubleclick.net/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "adservice.google.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "pubads.g.doubleclick.net/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "securepubads.g.doubleclick.net/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "i.pinimg.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "lemonde.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "geo.dailymotion.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "yt3.ggpht.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "widgets.outbrain.com/",
+      "resourceTypes": [
+        "script"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "allocine.fr/video/",
+      "resourceTypes": [
+        "script"
       ]
     }
   }
