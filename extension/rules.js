@@ -32,12 +32,12 @@ const responseAnuDeep = await octokit.request('GET /repos/{owner}/{repo}/content
 )
 
 // Ecriture des données de NoTracking dans domains.txt, puis ouverture du fichier.
-let dataNoTracking = await fs.writeFile('domains.txt', responseNoTracking.data);
-let fileNoTracking = await fs.open('domains.txt');
+let dataNoTracking = await fs.writeFile('../resources_txt/domains.txt', responseNoTracking.data);
+let fileNoTracking = await fs.open('../resources_txt/domains.txt');
 
 // Ecriture des données d'AnuDeep dans adservers.txt, puis ouverture du fichier.
-let dataAnuDeep = await fs.writeFile('adservers.txt', responseAnuDeep.data);
-let fileAnuDeep = await fs.open('adservers.txt');
+let dataAnuDeep = await fs.writeFile('../resources_txt/adservers.txt', responseAnuDeep.data);
+let fileAnuDeep = await fs.open('../resources_txt/adservers.txt');
 
 
 // Déclaration d'un tableau vide pour stocker les URLs des sites à bloquer
