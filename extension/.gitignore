@@ -1,12 +1,12 @@
 #Ignore _metadata, node_modules, packages
 
 /_metadata
-/node_modules
+/node_modules 
 /package.json
 /package-lock.json
-/.swo
-/.swp
-/.env
-/*.txt
-/rules.json
-/*.json
+/.swo 
+/.swp 
+/.env 
+/*.txt 
+/rules.json 
+/*.json 
