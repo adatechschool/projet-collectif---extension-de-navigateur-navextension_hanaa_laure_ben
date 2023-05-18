@@ -6,7 +6,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "googleads.g.doubleclick.net/",
+      "urlFilter": "||googleads.g.doubleclick.net/",
       "resourceTypes": [
         "script"
       ]
@@ -19,7 +19,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "aax.amazon-adsystem.com/",
+      "urlFilter": "||aax.amazon-adsystem.com/",
       "resourceTypes": [
         "script"
       ]
@@ -32,7 +32,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "tpc.googlesyndication/",
+      "urlFilter": "||tpc.googlesyndication/",
       "resourceTypes": [
         "script"
       ]
@@ -45,7 +45,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "pagead2.googlesyndication/",
+      "urlFilter": "||pagead2.googlesyndication/",
       "resourceTypes": [
         "script"
       ]
@@ -58,7 +58,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "tpc.googlesyndication.com/",
+      "urlFilter": "||tpc.googlesyndication.com/",
       "resourceTypes": [
         "script"
       ]
@@ -71,7 +71,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "googletagservices.com/",
+      "urlFilter": "||googletagservices.com/",
       "resourceTypes": [
         "script"
       ]
@@ -84,7 +84,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "googleadservices.com/",
+      "urlFilter": "||googleadservices.com/",
       "resourceTypes": [
         "script"
       ]
@@ -97,7 +97,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "s0.2mdn.net/",
+      "urlFilter": "||s0.2mdn.net/",
       "resourceTypes": [
         "script"
       ]
@@ -110,7 +110,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "ad.doubleclick.net/",
+      "urlFilter": "||ad.doubleclick.net/",
       "resourceTypes": [
         "script"
       ]
@@ -123,7 +123,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "adservice.google.com/",
+      "urlFilter": "||adservice.google.com/",
       "resourceTypes": [
         "script"
       ]
@@ -136,7 +136,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "pubads.g.doubleclick.net/",
+      "urlFilter": "||pubads.g.doubleclick.net/",
       "resourceTypes": [
         "script"
       ]
@@ -149,7 +149,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "securepubads.g.doubleclick.net/",
+      "urlFilter": "||securepubads.g.doubleclick.net/",
       "resourceTypes": [
         "script"
       ]
@@ -162,7 +162,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "i.pinimg.com/",
+      "urlFilter": "||i.pinimg.com/",
       "resourceTypes": [
         "script"
       ]
@@ -175,7 +175,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "lemonde.com/",
+      "urlFilter": "||lemonde.com/",
       "resourceTypes": [
         "script"
       ]
@@ -188,7 +188,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "geo.dailymotion.com/",
+      "urlFilter": "||geo.dailymotion.com/",
       "resourceTypes": [
         "script"
       ]
@@ -201,7 +201,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "yt3.ggpht.com/",
+      "urlFilter": "||yt3.ggpht.com/",
       "resourceTypes": [
         "script"
       ]
@@ -214,7 +214,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "widgets.outbrain.com/",
+      "urlFilter": "||widgets.outbrain.com/",
       "resourceTypes": [
         "script"
       ]
@@ -227,7 +227,7 @@
       "type": "block"
     },
     "condition": {
-      "urlFilter": "allocine.fr/video/",
+      "urlFilter": "||allocine.fr/video/",
       "resourceTypes": [
         "script"
       ]

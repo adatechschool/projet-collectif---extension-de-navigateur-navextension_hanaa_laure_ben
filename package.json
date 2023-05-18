@@ -1,6 +1,6 @@
 {
   "name": "projet-collectif---extension-de-navigateur-navextension_hanaa_laure_ben",
-  "type" : "module",
+  "type": "module",
   "version": "1.0.0",
   "description": "Projet d'extension Google Chrome, créé par Hanâa Belhamidi, Laure Mestre et Benjamin Dromard.",
   "main": "background.js",
